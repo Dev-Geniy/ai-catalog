@@ -7,7 +7,7 @@
 }
 
 body {
-    background: radial-gradient(circle, #090909, #020202);
+    background: radial-gradient(circle, #121212, #030303); /* Более тёмный фон */
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden;
@@ -22,15 +22,15 @@ body::before {
     width: 100%;
     height: 100%;
     background: url('https://source.unsplash.com/1600x900/?cyberpunk,neon') no-repeat center center/cover;
-    opacity: 0.1;
+    opacity: 0.15; /* Немного более приглушённый фон */
     z-index: -1;
     animation: flicker 3s infinite alternate;
 }
 
 /* Шапка сайта */
 header {
-    background: linear-gradient(90deg, #0f0c49, #404b93, #24243e);
-    color: #00f4ff;
+    background: linear-gradient(90deg, #1b1d5b, #4d5d93, #303346); /* Более спокойные оттенки */
+    color: #55f0ff; /* Приглушённый неоновый цвет */
     padding: 40px 0;
     text-align: center;
     animation: neonGlow 2s infinite alternate;
@@ -38,7 +38,7 @@ header {
 
 header h1 {
     font-size: 3.5rem;
-    text-shadow: 0 0 10px #00f4ff, 0 0 20px #ff007f;
+    text-shadow: 0 0 10px #55f0ff, 0 0 20px #d40071; /* Тот же неоновый эффект, но приглушённый */
 }
 
 /* Контейнер карточек */
@@ -46,8 +46,8 @@ header h1 {
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 40px;
+    gap: 15px;
+    padding: 15px;
     background: url('https://i.ibb.co/Q0fwW1v/edb24c57-7a4d-4139-bb7f-27e0cce9fb1a.jpg') no-repeat center center/cover;
     background-attachment: fixed; /* Фиксируем фон */
 }
@@ -60,10 +60,9 @@ header h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Затемнение */
+    background: rgba(0, 0, 0, 0.5); /* Более сильное затемнение */
     z-index: 1;
 }
-
 
 /* Чтобы карточки были поверх затемнённого фона */
 .card {
@@ -71,48 +70,50 @@ header h1 {
     z-index: 2;
 }
 
-
-/* Карточки */
+/* Карточки с прозрачным фоном */
 .card {
-    background: linear-gradient(135deg, #1a1a1a, #222);
+    background: linear-gradient(135deg, rgba(29, 29, 29, 0.7), rgba(42, 42, 42, 0.7)); /* Прозрачный фон */
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4); /* Мягкое свечение */
     position: relative;
     cursor: pointer;
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
+
+/* Эффект на карточку при наведении */
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
 }
 
 /* Хедер карточки */
 .card-header {
-    background: linear-gradient(45deg, #ff007f, #00f4ff);
+    background: linear-gradient(45deg, #ff007f, #40aaff); /* Более мягкое сочетание цветов */
     color: #fff;
     padding: 20px;
     font-size: 1.25rem;
     text-align: center;
-    text-shadow: 0 0 10px rgba(255, 0, 127, 0.7);
+    text-shadow: 0 0 10px rgba(255, 0, 127, 0.6);
 }
 
 /* Тело карточки */
 .card-body {
     padding: 20px;
-    background: rgba(18, 18, 18, 0.9);
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.card-body:hover {
-    background: rgba(34, 34, 34, 0.9);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Позволяет телу карточки занимать оставшееся пространство */
+    justify-content: space-between; /* Равномерное распределение пространства между элементами */
 }
 
 /* Кнопки */
 .card-body .btn {
     display: inline-block;
-    background: #00f4ff;
+    background: #55f0ff; /* Приглушённый цвет */
     color: #121212;
     padding: 12px 24px;
     border-radius: 8px;
@@ -123,14 +124,15 @@ header h1 {
     text-decoration: none;
     transition: background 0.3s ease, transform 0.2s ease;
     box-shadow: 0 0 10px rgba(0, 244, 255, 0.5);
+    align-self: center; /* Выравнивание кнопки по центру */
 }
-
 
 .card-body .btn:hover {
     background: #ff007f;
     transform: scale(1.1);
     box-shadow: 0 0 15px rgba(255, 0, 127, 0.8);
 }
+
 
 /* Анимация увеличения карточек */
 @keyframes expandAndRotate {
@@ -148,10 +150,10 @@ header h1 {
 /* Анимация неонового свечения */
 @keyframes neonGlow {
     0% {
-        text-shadow: 0 0 10px #00f4ff, 0 0 20px #ff007f;
+        text-shadow: 0 0 10px #55f0ff, 0 0 20px #d40071;
     }
     100% {
-        text-shadow: 0 0 15px #00f4ff, 0 0 30px #ff007f;
+        text-shadow: 0 0 15px #55f0ff, 0 0 30px #d40071;
     }
 }
 
@@ -161,16 +163,46 @@ header h1 {
         opacity: 0.1;
     }
     100% {
-        opacity: 0.2;
+        opacity: 0.3;
     }
 }
 
 /* Футер */
 footer {
-    background: #0a0a0a;
+    background: #121212; /* Более темный фон */
     color: #fff;
     text-align: center;
     padding: 20px;
     font-size: 1rem;
     margin-top: 50px;
+}
+
+/* Адаптивность: 2 карточки в ряд на маленьких экранах */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Адаптивность: уменьшение шрифта на маленьких экранах */
+@media (max-width: 768px) {
+    /* Уменьшаем шрифт заголовка карточки */
+    .card-header {
+        font-size: 0.8rem; /* Уменьшаем в 2 раза */
+    }
+
+    /* Уменьшаем шрифт тела карточки */
+    .card-body {
+        font-size: 0.75rem; /* Уменьшаем в 2 раза */
+    }
+
+    /* Уменьшаем размер шрифта на кнопке */
+    .card-body .btn {
+        font-size: 0.75rem; /* Уменьшаем в 2 раза */
+    }
+
+    /* Для всего контента карточек, если нужно, можно уменьшить общий размер шрифта */
+    .card {
+        font-size: 0.75rem;
+    }
 }
