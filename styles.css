@@ -1,0 +1,176 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif; /* Киберпанковый шрифт */
+}
+
+body {
+    background: radial-gradient(circle, #090909, #020202);
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Анимированный фон */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://source.unsplash.com/1600x900/?cyberpunk,neon') no-repeat center center/cover;
+    opacity: 0.1;
+    z-index: -1;
+    animation: flicker 3s infinite alternate;
+}
+
+/* Шапка сайта */
+header {
+    background: linear-gradient(90deg, #0f0c49, #404b93, #24243e);
+    color: #00f4ff;
+    padding: 40px 0;
+    text-align: center;
+    animation: neonGlow 2s infinite alternate;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    text-shadow: 0 0 10px #00f4ff, 0 0 20px #ff007f;
+}
+
+/* Контейнер карточек */
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    background: url('https://i.ibb.co/Q0fwW1v/edb24c57-7a4d-4139-bb7f-27e0cce9fb1a.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* Фиксируем фон */
+}
+
+/* Затемнение фона */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Затемнение */
+    z-index: 1;
+}
+
+
+/* Чтобы карточки были поверх затемнённого фона */
+.card {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Карточки */
+.card {
+    background: linear-gradient(135deg, #1a1a1a, #222);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+}
+
+/* Хедер карточки */
+.card-header {
+    background: linear-gradient(45deg, #ff007f, #00f4ff);
+    color: #fff;
+    padding: 20px;
+    font-size: 1.25rem;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 0, 127, 0.7);
+}
+
+/* Тело карточки */
+.card-body {
+    padding: 20px;
+    background: rgba(18, 18, 18, 0.9);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card-body:hover {
+    background: rgba(34, 34, 34, 0.9);
+}
+
+/* Кнопки */
+.card-body .btn {
+    display: inline-block;
+    background: #00f4ff;
+    color: #121212;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 10px rgba(0, 244, 255, 0.5);
+}
+
+
+.card-body .btn:hover {
+    background: #ff007f;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.8);
+}
+
+/* Анимация увеличения карточек */
+@keyframes expandAndRotate {
+    0% {
+        transform: scale(1) rotateX(0deg);
+    }
+    50% {
+        transform: scale(1.8) rotateX(180deg);
+    }
+    100% {
+        transform: scale(1) rotateX(360deg);
+    }
+}
+
+/* Анимация неонового свечения */
+@keyframes neonGlow {
+    0% {
+        text-shadow: 0 0 10px #00f4ff, 0 0 20px #ff007f;
+    }
+    100% {
+        text-shadow: 0 0 15px #00f4ff, 0 0 30px #ff007f;
+    }
+}
+
+/* Эффект мигания */
+@keyframes flicker {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+/* Футер */
+footer {
+    background: #0a0a0a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    margin-top: 50px;
+}
