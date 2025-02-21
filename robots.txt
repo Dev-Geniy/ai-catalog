@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dev-geniy.github.io/ai-catalog/sitemap.xml
