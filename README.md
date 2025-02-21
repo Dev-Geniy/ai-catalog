@@ -117,7 +117,7 @@ Here are some of the most powerful AI tools that you can use to enhance your wor
 
 AI tools can save you time and increase productivity in your daily tasks. Explore these services to find the best ones for your business, creative projects, or personal needs. Whether it's automating content creation, improving communication, or organizing tasks, AI has the potential to make your work easier and more efficient.
 
-# Developer
+## Developer
 
 This application was created by **DevGeniy**, who strives to make the project better every day. If you have ideas for improvements or suggestions, feel free to visit his profile on [X](https://x.com/HotDog850642) and get in touch with him.
 
