@@ -117,7 +117,7 @@ Here are some of the most powerful AI tools that you can use to enhance your wor
 
 AI tools can save you time and increase productivity in your daily tasks. Explore these services to find the best ones for your business, creative projects, or personal needs. Whether it's automating content creation, improving communication, or organizing tasks, AI has the potential to make your work easier and more efficient.
 
-## 💰 Support the Project
+## Support the Project
 If you enjoy Crypto Board WebApp, you can support its development by donating:
 
 ### Cryptocurrency Addresses (Click to Copy)
@@ -125,7 +125,7 @@ If you enjoy Crypto Board WebApp, you can support its development by donating:
 - **Ethereum (ETH):** `0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A`
 - **USDT (ERC-20):** `0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A`
 
-## 📜 License
+## License
 AI Tools is an open-source project licensed under the **MIT License**. Feel free to use, modify, and contribute!
 
 ---
